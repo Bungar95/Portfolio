@@ -1,25 +1,122 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | tothem</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/webigra2.json", {onProgress: UnityProgress});
-    </script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">tothem</div>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Unity WebGL Player | tothem</title>
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <script src="TemplateData/UnityProgress.js"></script>
+  <script src="Build/UnityLoader.js"></script>
+  <script>
+  var unityInstance = UnityLoader.instantiate("unityContainer", "Build/webigra2.json", {onProgress: UnityProgress});
+  </script>
+</head>
+
+<style media="screen">
+
+html {
+  text-align: center;
+  background-color: #080808;
+}
+body {
+  margin: 0px auto;
+}
+.samurai{
+  align-self: center;
+}
+.above, .dev, .tldr, .misc{
+  color: white;
+  font-family: Helvetica;
+}
+.dev a, .tldr a, .misc a{
+  color: #FF4649;
+}
+#container {
+  margin: 0 auto;
+}
+nav {
+  margin: 35px 0;
+  background-color: #FF4649;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+nav ul li {
+  display:inline-block;
+  background-color: ##cf4f2b;
+}
+nav a {
+  display:block;
+  padding:0 10px;
+  color:#FFF;
+  font-size:20px;
+  line-height: 60px;
+  text-decoration:none;
+}
+nav a:hover {
+  background-color: #333;
+}
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 60px;
+  background-color: ##cf4f2b;
+}
+nav ul li:hover > ul {
+  display:inherit;
+}
+nav ul ul li {
+  background-color: #FF4649;
+  width:230px;
+  float:none;
+  display:list-item;
+  position: relative;
+}
+nav ul ul ul li {
+  position: relative;
+  top:-60px;
+  left:230px;
+}
+nav ul ul li {
+  border: 1px solid white;
+}
+li > a:after { content:  ' ▼'; }
+li > a:only-child:after { content: ''; }
+
+</style>
+
+<div id="container">
+  <h1 class="above">For portfolio purposes (in development)</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Games</a>
+        <ul>
+          <li><a href="/legends/index.html">#1</a></li>
+          <li><a href="/game/index.html">#2</a></li>
+          <li><a href="/zero/index.html">#3</a></li>
+        </ul>
+      </li>
+      <li><a href="dev.html">Programming</a></li>
+      <li><a href="misc.html">MISC.</a></li>
+      <li><a href="tldr.html">TL/DR</a></li>
+    </ul>
+  </nav>
+  <br><br>
+</div>
+
+<body>
+  <div class="webgl-content">
+    <div id="unityContainer" style="width: 960px; height: 600px"></div>
+    <div class="footer">
+      <div class="webgl-logo"></div>
+      <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+      <div class="title">tothem</div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
