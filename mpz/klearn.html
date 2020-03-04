@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style>
+	body {
+	background-image:url(birds.jpg);
+	}
+	</style>
+</head>
+<body>
+
+<img id="glavni" width="0" height="0" src="katakana.png">
+<img id="h_samoglasnici" width="0" height="0" src="k_samoglasnici.png">
+<img id="h_ka" width="0" height="0" src="k_ka.png">
+<img id="h_sa" width="0" height="0" src="k_sa.png">
+<img id="h_ta" width="0" height="0" src="k_ta.png">
+<img id="h_na" width="0" height="0" src="k_na.png">
+<img id="h_ha" width="0" height="0" src="k_ha.png">
+<img id="h_ma" width="0" height="0" src="k_ma.png">
+<img id="h_ya" width="0" height="0" src="k_ya.png">
+<img id="h_ra" width="0" height="0" src="k_ra.png">
+<img id="h_wawon" width="0" height="0" src="k_wawon.png">
+<img id="naslovna" width="0" height="0" src="BG.jpg">
+<canvas id="canvas1" width="889" height="650" style="z-index: 1;position:absolute; left:8px; top:8px; border:1px solid #000000;"></canvas>
+<canvas id="back" width="125" height="50" style="z-index: 2;position:absolute; left:658px; top:570px;"></canvas>
+<canvas id="back2" width="125" height="50" style="z-index: 1;position:absolute; left:5000px; top:8000px;"></canvas>
+<canvas id="help" width="70" height="30" style="z-index: 2;position:absolute; left:778px; top:38px;"></canvas>
+<canvas id="help2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="helpback" width="125" height="70" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="a" width="64" height="79" style="z-index: 2;position:absolute; left:746px; top:135px;"></canvas>
+<canvas id="i" width="64" height="84" style="z-index: 2;position:absolute; left:746px; top:216px;"></canvas>
+<canvas id="u" width="64" height="85" style="z-index: 2;position:absolute; left:746px; top:300px;"></canvas>
+<canvas id="e" width="64" height="85" style="z-index: 2;position:absolute; left:746px; top:387px;"></canvas>
+<canvas id="o" width="64" height="85" style="z-index: 2;position:absolute; left:746px; top:473px;"></canvas>
+<canvas id="ka" width="66" height="79" style="z-index: 2;position:absolute; left:678px; top:135px;"></canvas>
+<canvas id="ki" width="66" height="84" style="z-index: 2;position:absolute; left:678px; top:216px;"></canvas>
+<canvas id="ku" width="66" height="85" style="z-index: 2;position:absolute; left:678px; top:300px;"></canvas>
+<canvas id="ke" width="66" height="85" style="z-index: 2;position:absolute; left:678px; top:387px;"></canvas>
+<canvas id="ko" width="66" height="85" style="z-index: 2;position:absolute; left:678px; top:473px;"></canvas>
+<canvas id="sa" width="66" height="79" style="z-index: 2;position:absolute; left:610px; top:135px;"></canvas>
+<canvas id="shi" width="66" height="84" style="z-index: 2;position:absolute; left:610px; top:216px;"></canvas>
+<canvas id="su" width="66" height="85" style="z-index: 2;position:absolute; left:610px; top:300px;"></canvas>
+<canvas id="se" width="66" height="85" style="z-index: 2;position:absolute; left:610px; top:387px;"></canvas>
+<canvas id="so" width="66" height="85" style="z-index: 2;position:absolute; left:610px; top:473px;"></canvas>
+<canvas id="ta" width="66" height="79" style="z-index: 2;position:absolute; left:542px; top:135px;"></canvas>
+<canvas id="chi" width="66" height="84" style="z-index: 2;position:absolute; left:542px; top:216px;"></canvas>
+<canvas id="tsu" width="66" height="85" style="z-index: 2;position:absolute; left:542px; top:300px;"></canvas>
+<canvas id="te" width="66" height="85" style="z-index: 2;position:absolute; left:542px; top:387px;"></canvas>
+<canvas id="to" width="66" height="85" style="z-index: 2;position:absolute; left:542px; top:473px;"></canvas>
+<canvas id="na" width="66" height="79" style="z-index: 2;position:absolute; left:475px; top:135px;"></canvas>
+<canvas id="ni" width="66" height="84" style="z-index: 2;position:absolute; left:475px; top:216px;"></canvas>
+<canvas id="nu" width="66" height="85" style="z-index: 2;position:absolute; left:475px; top:300px;"></canvas>
+<canvas id="ne" width="66" height="85" style="z-index: 2;position:absolute; left:475px; top:387px;"></canvas>
+<canvas id="no" width="66" height="85" style="z-index: 2;position:absolute; left:475px; top:473px;"></canvas>
+<canvas id="ha" width="68" height="79" style="z-index: 2;position:absolute; left:405px; top:135px;"></canvas>
+<canvas id="hi" width="67" height="84" style="z-index: 2;position:absolute; left:406px; top:216px;"></canvas>
+<canvas id="fu" width="67" height="85" style="z-index: 2;position:absolute; left:406px; top:300px;"></canvas>
+<canvas id="he" width="67" height="85" style="z-index: 2;position:absolute; left:406px; top:387px;"></canvas>
+<canvas id="ho" width="66" height="85" style="z-index: 2;position:absolute; left:407px; top:473px;"></canvas>
+<canvas id="ma" width="65" height="79" style="z-index: 2;position:absolute; left:338px; top:134px;"></canvas>
+<canvas id="mi" width="65" height="84" style="z-index: 2;position:absolute; left:338px; top:216px;"></canvas>
+<canvas id="mu" width="65" height="85" style="z-index: 2;position:absolute; left:339px; top:300px;"></canvas>
+<canvas id="me" width="65" height="85" style="z-index: 2;position:absolute; left:338px; top:387px;"></canvas>
+<canvas id="mo" width="66" height="85" style="z-index: 2;position:absolute; left:338px; top:473px;"></canvas>
+<canvas id="ya" width="67" height="81" style="z-index: 2;position:absolute; left:270px; top:132px;"></canvas>
+<canvas id="yu" width="67" height="85" style="z-index: 2;position:absolute; left:270px; top:300px;"></canvas>
+<canvas id="yo" width="67" height="85" style="z-index: 2;position:absolute; left:270px; top:473px;"></canvas>
+<canvas id="ra" width="66" height="81" style="z-index: 2;position:absolute; left:201px; top:132px;"></canvas>
+<canvas id="ri" width="66" height="84" style="z-index: 2;position:absolute; left:201px; top:216px;"></canvas>
+<canvas id="ru" width="66" height="85" style="z-index: 2;position:absolute; left:201px; top:300px;"></canvas>
+<canvas id="re" width="66" height="85" style="z-index: 2;position:absolute; left:201px; top:387px;"></canvas>
+<canvas id="ro" width="66" height="85" style="z-index: 2;position:absolute; left:201px; top:473px;"></canvas>
+<canvas id="wa" width="66" height="81" style="z-index: 2;position:absolute; left:132px; top:132px;"></canvas>
+<canvas id="wo" width="66" height="85" style="z-index: 2;position:absolute; left:132px; top:473px;"></canvas>
+<canvas id="n" width="67" height="81" style="z-index: 2;position:absolute; left:64px; top:132px;"></canvas>
+
+<canvas id="a2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ka2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="i2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="u2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="e2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="o2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ki2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ku2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ke2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ko2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="sa2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="shi2" width="889" height="650" style="z-index:-1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="su2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="se2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="so2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ta2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="chi2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="tsu2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="te2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="to2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="na2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ni2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="nu2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ne2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="no2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ha2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="hi2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="fu2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="he2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ho2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ma2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="mi2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="mu2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="me2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="mo2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ya2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="yu2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="yo2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ra2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ri2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ru2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="re2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="ro2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="wa2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="wo2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="n2" width="889" height="650" style="z-index: -1;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+
+<script>
+window.onload = function() {
+	var ctx = document.getElementById('canvas1').getContext('2d');
+	var glavni = document.getElementById("glavni");
+    ctx.drawImage(glavni, 0, 0);
+	
+	//tekst
+	ctx.font = "22px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("You can click on the characters...",55, 90);
+	
+	//back
+	ctx.beginPath();
+	ctx.rect(650,562, 125,50);
+	ctx.stroke();
+	ctx.font = "32px Kozuka Mincho Pro";
+	ctx.fillText("Back", 675,595);
+	
+	//help
+	ctx.beginPath();
+	ctx.rect(770,30,70,30);
+	ctx.stroke();
+	ctx.font = "18px Kozuka Mincho Pro";
+	ctx.fillText("Help", 785, 52);
+	
+	//helpCanvas
+	var ctx = document.getElementById('help2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "white";
+	ctx.font = "35px Kozuka Mincho Pro";
+	ctx.fillText("Katakana is the Japanese alphabet used to", 90, 100);
+	ctx.fillText("write foreign words (while hiragana is used to", 90, 140);
+	ctx.fillText("write native words).", 90, 180);
+	ctx.fillText("Click on a character to enlarge it and find", 90, 270);
+	ctx.fillText("out how to properly draw it. Each arrow", 90, 310);
+	ctx.fillText("represents 1 stroke.", 90, 350);
+	ctx.beginPath();
+	ctx.rect(650,550, 125,70);
+	ctx.stroke();
+	ctx.fillText("Back", 675,600);
+	var ctx = document.getElementById('helpback').getContext;
+	
+	//getcontext za sve canvase
+	var ctx = document.getElementById('a').getContext('2d');
+	var ctx = document.getElementById('i').getContext('2d');
+	var ctx = document.getElementById('u').getContext('2d');
+	var ctx = document.getElementById('e').getContext('2d');
+	var ctx = document.getElementById('o').getContext('2d');
+	var ctx = document.getElementById('ka').getContext('2d');
+	var ctx = document.getElementById('ki').getContext('2d');
+	var ctx = document.getElementById('ku').getContext('2d');
+	var ctx = document.getElementById('ke').getContext('2d');
+	var ctx = document.getElementById('ko').getContext('2d');
+	var ctx = document.getElementById('sa').getContext('2d');
+	var ctx = document.getElementById('shi').getContext('2d');
+	var ctx = document.getElementById('su').getContext('2d');
+	var ctx = document.getElementById('se').getContext('2d');
+	var ctx = document.getElementById('so').getContext('2d');
+	var ctx = document.getElementById('ta').getContext('2d');
+	var ctx = document.getElementById('chi').getContext('2d');
+	var ctx = document.getElementById('tsu').getContext('2d');
+	var ctx = document.getElementById('te').getContext('2d');
+	var ctx = document.getElementById('to').getContext('2d');
+	var ctx = document.getElementById('ha').getContext('2d');
+	var ctx = document.getElementById('hi').getContext('2d');
+	var ctx = document.getElementById('fu').getContext('2d');
+	var ctx = document.getElementById('he').getContext('2d');
+	var ctx = document.getElementById('ho').getContext('2d');
+	var ctx = document.getElementById('na').getContext('2d');
+	var ctx = document.getElementById('ni').getContext('2d');
+	var ctx = document.getElementById('nu').getContext('2d');
+	var ctx = document.getElementById('ne').getContext('2d');
+	var ctx = document.getElementById('no').getContext('2d');
+	var ctx = document.getElementById('ma').getContext('2d');
+	var ctx = document.getElementById('mi').getContext('2d');
+	var ctx = document.getElementById('mu').getContext('2d');
+	var ctx = document.getElementById('me').getContext('2d');
+	var ctx = document.getElementById('mo').getContext('2d');
+	var ctx = document.getElementById('ya').getContext('2d');
+	var ctx = document.getElementById('yu').getContext('2d');
+	var ctx = document.getElementById('yo').getContext('2d');
+	var ctx = document.getElementById('ra').getContext('2d');
+	var ctx = document.getElementById('ri').getContext('2d');
+	var ctx = document.getElementById('ru').getContext('2d');
+	var ctx = document.getElementById('re').getContext('2d');
+	var ctx = document.getElementById('ro').getContext('2d');
+	var ctx = document.getElementById('wa').getContext('2d');
+	var ctx = document.getElementById('wo').getContext('2d');
+	var ctx = document.getElementById('n').getContext('2d');
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//a
+	var ctx = document.getElementById('a2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("a", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ア", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_samoglasnici = document.getElementById("h_samoglasnici");
+    ctx.drawImage(h_samoglasnici,0,0,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//i
+	var ctx = document.getElementById('i2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("i", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("イ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_samoglasnici = document.getElementById("h_samoglasnici");
+    ctx.drawImage(h_samoglasnici,0,100,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//u
+	var ctx = document.getElementById('u2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("u", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ウ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_samoglasnici = document.getElementById("h_samoglasnici");
+    ctx.drawImage(h_samoglasnici,0,200,400,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	
+	//e
+	var ctx = document.getElementById('e2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("e", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("エ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_samoglasnici = document.getElementById("h_samoglasnici");
+    ctx.drawImage(h_samoglasnici,0,300,400,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	
+	//o
+	var ctx = document.getElementById('o2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("o", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("オ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_samoglasnici = document.getElementById("h_samoglasnici");
+    ctx.drawImage(h_samoglasnici,0,400,400,100, 120, 400,650, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	
+	//ka
+	var ctx = document.getElementById('ka2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ka", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("カ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ka = document.getElementById("h_ka");
+    ctx.drawImage(h_ka,0,0,300,100, 150, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	
+	//ki
+	var ctx = document.getElementById('ki2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ki", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("キ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ka = document.getElementById("h_ka");
+    ctx.drawImage(h_ka,0,100,400,100, 150, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	
+	//ku
+	var ctx = document.getElementById('ku2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ku", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ク", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ka = document.getElementById("h_ka");
+    ctx.drawImage(h_ka,0,200,300,100, 250, 400,400, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	
+	//ke
+	var ctx = document.getElementById('ke2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ke", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ケ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ka = document.getElementById("h_ka");
+    ctx.drawImage(h_ka,0,300,400,100, 120, 400,650, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	
+	//ko
+	var ctx = document.getElementById('ko2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ko", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("コ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ka = document.getElementById("h_ka");
+    ctx.drawImage(h_ka,0,400,300,100, 110, 400,650, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	
+	//sa
+	var ctx = document.getElementById('sa2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("sa", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("サ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_sa = document.getElementById("h_sa");
+    ctx.drawImage(h_sa,0,0,400,100, 120, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	
+	//shi
+	var ctx = document.getElementById('shi2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("shi", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("シ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_sa = document.getElementById("h_sa");
+    ctx.drawImage(h_sa,0,100,400,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	
+	//su
+	var ctx = document.getElementById('su2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("su", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ス", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_sa = document.getElementById("h_sa");
+    ctx.drawImage(h_sa, 0, 200,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	
+	//se
+	var ctx = document.getElementById('se2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("se", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("セ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_sa = document.getElementById("h_sa");
+    ctx.drawImage(h_sa,0,300,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	
+	//so
+	var ctx = document.getElementById('so2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("so", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ソ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_sa = document.getElementById("h_sa");
+    ctx.drawImage(h_sa,0,400,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	
+	//ta
+	var ctx = document.getElementById('ta2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ta", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("タ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ta = document.getElementById("h_ta");
+    ctx.drawImage(h_ta,0,0,400,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//chi
+	var ctx = document.getElementById('chi2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("chi", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("チ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ta = document.getElementById("h_ta");
+    ctx.drawImage(h_ta,0,100,400,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//tsu
+	var ctx = document.getElementById('tsu2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("tsu", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ツ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ta = document.getElementById("h_ta");
+    ctx.drawImage(h_ta,0,20,400,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//te
+	var ctx = document.getElementById('te2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("te", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("テ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ta = document.getElementById("h_ta");
+    ctx.drawImage(h_ta,0,300,400,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//to
+	var ctx = document.getElementById('to2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("to", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ト", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ta = document.getElementById("h_ta");
+    ctx.drawImage(h_ta,0,400,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//na
+	var ctx = document.getElementById('na2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("na", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ナ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_na = document.getElementById("h_na");
+    ctx.drawImage(h_na,0,0,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//ni
+	var ctx = document.getElementById('ni2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ni", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ニ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_na = document.getElementById("h_na");
+    ctx.drawImage(h_na,0,100,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//nu
+	var ctx = document.getElementById('nu2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("nu", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ヌ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_na = document.getElementById("h_na");
+    ctx.drawImage(h_na,0,200,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//ne
+	var ctx = document.getElementById('ne2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ne", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ネ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_na = document.getElementById("h_na");
+    ctx.drawImage(h_na,0,300,500,100, 150, 400,580, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//no
+	var ctx = document.getElementById('no2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("no", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ノ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_na = document.getElementById("h_na");
+    ctx.drawImage(h_na,0,400,200,100, 190, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//ha
+	var ctx = document.getElementById('ha2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ha", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ハ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ha = document.getElementById("h_ha");
+    ctx.drawImage(h_ha,0,0,300,100, 120, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//hi
+	var ctx = document.getElementById('hi2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("hi", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ヒ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ha = document.getElementById("h_ha");
+    ctx.drawImage(h_ha,0,100,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//fu
+	var ctx = document.getElementById('fu2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("fu", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("フ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ha = document.getElementById("h_ha");
+    ctx.drawImage(h_ha,0,200,200,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//he
+	var ctx = document.getElementById('he2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("he", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ヘ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ha = document.getElementById("h_ha");
+    ctx.drawImage(h_ha,0,300,200,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//ho
+	var ctx = document.getElementById('ho2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ho", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ホ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ha = document.getElementById("h_ha");
+    ctx.drawImage(h_ha,0,400,500,100, 130, 400,650, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//ma
+	var ctx = document.getElementById('ma2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ma", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("マ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ma = document.getElementById("h_ma");
+    ctx.drawImage(h_ma,0,0,300,100, 150, 400,550, 170);
+	ctx.rect(700,50, 125,50);	
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//mi
+	var ctx = document.getElementById('mi2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("mi", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ミ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ma = document.getElementById("h_ma");
+    ctx.drawImage(h_ma,0,100,400,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//mu
+	var ctx = document.getElementById('mu2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("mu", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ム", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ma = document.getElementById("h_ma");
+    ctx.drawImage(h_ma,0,200,300,100, 140, 400,550, 190);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//me
+	var ctx = document.getElementById('me2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("me", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("メ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ma = document.getElementById("h_ma");
+    ctx.drawImage(h_ma,0,300,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//mo
+	var ctx = document.getElementById('mo2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("mo", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("モ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ma = document.getElementById("h_ma");
+    ctx.drawImage(h_ma,0,400,400,100, 130, 400,580, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//ya
+	var ctx = document.getElementById('ya2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ya", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ヤ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ya = document.getElementById("h_ya");
+    ctx.drawImage(h_ya,0,0,300,100, 180, 400,580, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//yu
+	var ctx = document.getElementById('yu2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("yu", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ユ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ya = document.getElementById("h_ya");
+    ctx.drawImage(h_ya,0,200,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//yo
+	var ctx = document.getElementById('yo2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("yo", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ヨ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ya = document.getElementById("h_ya");
+    ctx.drawImage(h_ya,0,400,400,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//ra
+	var ctx = document.getElementById('ra2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ra", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ラ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ra = document.getElementById("h_ra");
+    ctx.drawImage(h_ra,0,0,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//ri
+	var ctx = document.getElementById('ri2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ri", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("リ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ra = document.getElementById("h_ra");
+    ctx.drawImage(h_ra,0,100,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//ru
+	var ctx = document.getElementById('ru2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ru", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ル", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ra = document.getElementById("h_ra");
+    ctx.drawImage(h_ra,0,200,200,100, 180, 400,580, 170);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//re
+	var ctx = document.getElementById('re2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("re", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("レ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ra = document.getElementById("h_ra");
+    ctx.drawImage(h_ra,0,300,400,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//ro
+	var ctx = document.getElementById('ro2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("ro", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ロ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_ra = document.getElementById("h_ra");
+    ctx.drawImage(h_ra,0,400,200,100, 180, 400,580, 190);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//wa
+	var ctx = document.getElementById('wa2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("wa", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ワ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_wawon = document.getElementById("h_wawon");
+    ctx.drawImage(h_wawon,0,0,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//wo
+	var ctx = document.getElementById('wo2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("wo", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ヲ", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_wawon = document.getElementById("h_wawon");
+	ctx.drawImage(h_wawon,0,400,400,100, 180, 400,550, 150);	
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+	//n
+	var ctx = document.getElementById('n2').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "black";
+	ctx.font = "150px Kozuka Mincho Pro";
+	ctx.fillText("n", 80, 200);
+	ctx.font = "200px Kozuka Mincho Pro";
+	ctx.fillText("ン", 350, 255);
+	ctx.beginPath();
+	ctx.moveTo(0,325);
+	ctx.lineTo(889,325);
+	ctx.stroke();
+	var h_wawon = document.getElementById("h_wawon");
+    ctx.drawImage(h_wawon,0,0,300,100, 180, 400,550, 150);
+	ctx.rect(700,50, 125,50);
+	ctx.stroke();
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillStyle = "white";
+	ctx.fillText("Back", 730,85);
+	var ctx = document.getElementById('back2').getContext('2d');
+	
+}
+
+	var ctx = document.getElementById('back');
+	ctx.onclick = function(){
+	   window.location.assign("index.html");
+       	  }
+		  
+	var ctx = document.getElementById('help');
+	ctx.onclick = function(){
+	    canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		help2.style.left = "8px";
+		help2.style.top = "8px";
+		helpback.style.left = "659px";
+		helpback.style.top = "557px";
+		back.style.left = "5000px";
+		back.style.top = "8000px";
+		}
+	
+	var ctx = document.getElementById('helpback');
+		ctx.onclick = function(){
+			canvas1.style.left = "8px";
+			canvas1.style.top = "8px";
+			help2.style.left = "5000px";
+			help2.style.top = "8000px";
+			helpback.style.left = "5000px";
+			helpback.style.top = "8000px";
+			back.style.left = "658px";
+			back.style.top = "558px";  	 
+	}
+
+	var ctx = document.getElementById('a');
+		ctx.onclick = function(){
+		a2.style.left="8px";
+		a2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('i');
+		ctx.onclick = function(){
+		i2.style.left="8px";
+		i2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('u');
+		ctx.onclick = function(){
+		u2.style.left="8px";
+		u2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('e');
+		ctx.onclick = function(){
+		e2.style.left="8px";
+		e2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('o');
+		ctx.onclick = function(){
+		o2.style.left="8px";
+		o2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ka');
+		ctx.onclick = function(){
+		ka2.style.left="8px";
+		ka2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ki');
+		ctx.onclick = function(){
+		ki2.style.left="8px";
+		ki2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ku');
+		ctx.onclick = function(){
+		ku2.style.left="8px";
+		ku2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ke');
+		ctx.onclick = function(){
+		ke2.style.left="8px";
+		ke2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ko');
+		ctx.onclick = function(){
+		ko2.style.left="8px";
+		ko2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('sa');
+		ctx.onclick = function(){
+		sa2.style.left="8px";
+		sa2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('shi');
+		ctx.onclick = function(){
+		shi2.style.left="8px";
+		shi2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('su');
+		ctx.onclick = function(){
+		su2.style.left="8px";
+		su2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('se');
+		ctx.onclick = function(){
+		se2.style.left="8px";
+		se2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('so');
+		ctx.onclick = function(){
+		so2.style.left="8px";
+		so2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ta');
+		ctx.onclick = function(){
+		ta2.style.left="8px";
+		ta2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('chi');
+		ctx.onclick = function(){
+		chi2.style.left="8px";
+		chi2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('tsu');
+		ctx.onclick = function(){
+		tsu2.style.left="8px";
+		tsu2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('te');
+		ctx.onclick = function(){
+		te2.style.left="8px";
+		te2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('to');
+		ctx.onclick = function(){
+		to2.style.left="8px";
+		to2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('na');
+		ctx.onclick = function(){
+		na2.style.left="8px";
+		na2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ni');
+		ctx.onclick = function(){
+		ni2.style.left="8px";
+		ni2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('nu');
+		ctx.onclick = function(){
+		nu2.style.left="8px";
+		nu2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ne');
+		ctx.onclick = function(){
+		ne2.style.left="8px";
+		ne2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('no');
+		ctx.onclick = function(){
+		no2.style.left="8px";
+		no2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ha');
+		ctx.onclick = function(){
+		ha2.style.left="8px";
+		ha2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('hi');
+		ctx.onclick = function(){
+		hi2.style.left="8px";
+		hi2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('fu');
+		ctx.onclick = function(){
+		fu2.style.left="8px";
+		fu2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('he');
+		ctx.onclick = function(){
+		he2.style.left="8px";
+		he2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ho');
+		ctx.onclick = function(){
+		ho2.style.left="8px";
+		ho2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ma');
+		ctx.onclick = function(){
+		ma2.style.left="8px";
+		ma2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('mi');
+		ctx.onclick = function(){
+		mi2.style.left="8px";
+		mi2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('mu');
+		ctx.onclick = function(){
+		mu2.style.left="8px";
+		mu2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('me');
+		ctx.onclick = function(){
+		me2.style.left="8px";
+		me2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('mo');
+		ctx.onclick = function(){
+		mo2.style.left="8px";
+		mo2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ya');
+		ctx.onclick = function(){
+		ya2.style.left="8px";
+		ya2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('yu');
+		ctx.onclick = function(){
+		yu2.style.left="8px";
+		yu2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('yo');
+		ctx.onclick = function(){
+		yo2.style.left="8px";
+		yo2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ra');
+		ctx.onclick = function(){
+		ra2.style.left="8px";
+		ra2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ri');
+		ctx.onclick = function(){
+		ri2.style.left="8px";
+		ri2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ru');
+		ctx.onclick = function(){
+		ru2.style.left="8px";
+		ru2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('re');
+		ctx.onclick = function(){
+		re2.style.left="8px";
+		re2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('ro');
+		ctx.onclick = function(){
+		ro2.style.left="8px";
+		ro2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('wa');
+		ctx.onclick = function(){
+		wa2.style.left="8px";
+		wa2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('wo');
+		ctx.onclick = function(){
+		wo2.style.left="8px";
+		wo2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	
+	var ctx = document.getElementById('n');
+		ctx.onclick = function(){
+		n2.style.left="8px";
+		n2.style.top="8px";
+		canvas1.style.left = "5000px";
+		canvas1.style.top = "8000px";
+		back2.style.left = "700px";
+		back2.style.top = "50px";
+		help.style.left = "5000px";
+		help.style.top = "8000px";
+			
+	}
+	var ctx = document.getElementById('back2');
+		ctx.onclick = function(){
+			window.location.assign("klearn.html");
+	}
+</script>
+</body>
+</html>

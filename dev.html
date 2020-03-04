@@ -1,0 +1,160 @@
+<!doctype html>
+
+<!-- Everything done by myself, inspiration drawn from various sources, most notably from https://www.youtube.com/watch?v=uBqn4h1x6lo . -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio B.U.</title>
+  <!-- not working? <link rel="stylesheet" type="text/css" href="assets/css/main.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+
+  <style media="screen">
+
+  html {
+    text-align: center;
+    background-color: #080808;
+  }
+  body {
+    margin: 0px auto;
+  }
+  .samurai{
+    align-self: center;
+  }
+  .above, .dev, .tldr, .misc{
+    color: white;
+    font-family: Helvetica;
+  }
+  .dev a, .tldr a, .misc a{
+    color: #FF4649;
+  }
+  #container {
+  margin: 0 auto;
+  }
+  nav {
+  margin: 35px 0;
+  background-color: #FF4649;
+  }
+  nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  }
+  nav ul li {
+  display:inline-block;
+  background-color: ##cf4f2b;
+  }
+  nav a {
+  display:block;
+  padding:0 10px;
+  color:#FFF;
+  font-size:20px;
+  line-height: 60px;
+  text-decoration:none;
+  }
+  nav a:hover {
+  background-color: #333;
+  }
+  nav ul ul {
+  display: none;
+  position: absolute;
+  top: 60px;
+  background-color: ##cf4f2b;
+  }
+  nav ul li:hover > ul {
+  display:inherit;
+  }
+  nav ul ul li {
+  background-color: #FF4649;
+  width:230px;
+  float:none;
+  display:list-item;
+  position: relative;
+  }
+  nav ul ul ul li {
+  position: relative;
+  top:-60px;
+  left:230px;
+  }
+  nav ul ul li {
+  border: 1px solid white;
+  }
+  li > a:after { content:  ' ▼'; }
+  li > a:only-child:after { content: ''; }
+
+  </style>
+
+  <div id="container">
+    <h1 class="above">For portfolio purposes (in development)</h1>
+    <nav>
+      <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="#">Games</a>
+          <ul>
+            <li><a href="/legends/index.html">#1</a></li>
+            <li><a href="/game/index.html">#2</a></li>
+            <li><a href="/zero/index.html">#3</a></li>
+          </ul>
+        </li>
+        <li><a href="dev.php">Programming</a></li>
+        <li><a href="misc.php">MISC.</a></li>
+        <li><a href="tldr.php">TL/DR</a></li>
+      </ul>
+    </nav>
+    <br><br>
+  </div>
+</head>
+
+<body>
+  <!-- <h2 style="position: absolute; left: 300px; top: 80px;"> Like a samurai on an endless journey, searching for my way. </h2> -->
+  <div class="dev" style="margin:50px; text-align:justify;">
+
+    My web development consists of 90% <a href="#wordpress">Wordpress</a> and 10% everything else (that excludes everything learned through obligatory education).
+    <br/><br/>
+    Web languages used/learned during education: HTML, CSS, JS, <a href="#php">PHP</a>. My very first web project was an application for learning japanese letters. You can check it <a href="mpz/index.html" target="_blank">here</a> but remember, its a beginner's first attempt
+    at HTML and Javascript, also unfinished :P. Most of the code uses Javascript Canvas element.
+    <br/> FUN FACT: The professor wanted me to use as little files as possible, so what I thought off at that time  was to make canvases invisible
+    and position them on huge x and y positions so that they wouldn't interfere with their invisible clickable spots. That's why the window can be scrolled. Would love to recreate the app on a different platform.
+    <br/><br/>
+    For more backend action, also my very first contact with programming, there is the father of lots of modern languages, C. In university, Python and <a href="#java">Java</a>. It's been a lot of years since I used C and Python and I pretty much forgotten their syntax (talking mostly for Python since languages borrow C's syntax a lot), but they
+    were useful to develop the "how to read/think/solve problems like a programmer" sense, which proved to be very important as I saw colleages that didn't have programming before college struggle with it. Other than that, I used C# for Unity purposes (but can't say I know C#, rather understand the basics enough
+    to tweak finished scripts for my needs).
+    <br/><br/>
+    Other languages that I had contact with are XML, RDF, [have a feeling there are more but forgotten about them.]...
+
+    <div id="wordpress">
+      <h2>WORDPRESS</h2>
+    Less coding and more plugin management, learning the environment and community and a bit of custom code editing. Here's a list of sites I made freelancing (all sites are made for real customers) in no specific order (although it will be obvious which were made early on and
+    which later on :) ).
+    <ul>
+      <li> <a href="http://allianthe.com.hr/" target="_blank">Allianthe aromaterapija</a> </li>
+      <li> <a href="https://stropovi.eu/" target="_blank">IRIS stropovi</a> </li>
+      <li> <a href="https://skartoc.hr/" target="_blank">Škartoc slastičarnica</a> </li>
+      <li> <a href="http://teosoft.hr/" target="_blank">Teosoft</a> </li>
+      <li> <a href="https://www.najamlimuzine.com/" target="_blank">Limuzine Šarić</a> </li>
+    </ul>
+    There are some other instances where I didn't create the whole website, but rather customised shops (variable products, different shippings, etc.), translated to other languages, remade parts of website with better plugins etc.
+  </div>
+
+  <div id="php">
+    <h2>PHP</h2>
+    Regarding PHP, it's the last language I learned (as part of curriculum). The projects I can offer to show some code are on Github and require setting up a database.<br/>
+    <u><h3>Kamenskarepapir (Rock paper scissors)</h3></u> &nbsp - started as a obligatory assignment, the point was to make a website that connects to a databases and does something... so I made a website to play rock paper scissors against
+    a computer (first you have to register a simple account) and there's a couple of database tables, 1 for storing users, 1 for admins etc. There's also a section where users can add comments, but admins can also
+    edit/delete etc. You can check it <a href="https://github.com/Bungar95/Programiranje1-Igraonica" target="_blank">here</a>.
+    <h3><u>Youtube (clone, unfinished)</u></h3> &nbsp - started a tutorial for OOP PHP programming, however in the meantime started working on an Android project and never took the time to finish this. If I recall correctly, as of February 2020,
+    the last update I made is an empty website, but the upload function working, meaning you can upload a video, describe it like you would on Youtube and it would appear in one of the projects's folders and database, along with creating 3
+    thumbnails from the video. You can check it <a href="https://github.com/Bungar95/Youtube_Clone" target="_blank">here</a>.
+    <h3><u>Data visualization</u></h3> &nbsp - can't show the code since it's private, but here's an image. Basically it's data visualization using JS (D3.js), PHP and JSON. (my contribution is the data visualization part only, not the whole site)<br/><br/>
+    <img src="assets/chart.png" alt="data visualization" style='width:80%;'>
+
+    </div>
+
+    <div id="java">
+      <h2>JAVA</h2>
+
+  </div>
+  </div>
+
+</body>
+</html>

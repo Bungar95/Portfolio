@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style>
+	body {
+	background-image:url(birds.jpg);
+	}
+	</style>
+</head>
+<body>
+<img id="naslovna" width="0" height="0" src="BG.jpg" alt="Naslovnica">
+<canvas id="canvas1" width="889" height="650" style="z-index: 1;position:absolute; border:1px solid #000000;"></canvas>
+<canvas id="canvas2" width="208" height="72" style="z-index: 2;position:absolute; left:349px; top:508px; border:1px solid #000000;"></canvas>
+<canvas id="canvas3" width="889" height="650" style="z-index: -1;position:absolute; left:8000px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="hlearn" width="150" height="50" style="z-index: 1;position:absolute; left:8000px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="klearn" width="150" height="50" style="z-index: 1;position:absolute; left:8000px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="hquiz" width="150" height="50" style="z-index: 1;position:absolute; left:8000px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="kquiz" width="150" height="50" style="z-index: 1;position:absolute; left:8000px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="final" width="205" height="50" style="z-index: 1;position:absolute; left:8000px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="help" width="70" height="30" style="z-index: 1;position:absolute; left:8000px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="help2" width="889" height="650" style="z-index: -3;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+<canvas id="back" width="125" height="70" style="z-index: -2;position:absolute; left:8800px; top:5000px; border:1px solid #000000;"></canvas>
+
+<script>
+window.onload = function() {
+    var ctx = document.getElementById('canvas1').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "white";
+	ctx.font = "60px Kozuka Mincho Pro";
+	ctx.fillText("Let's learn", (canvas1.width/3), 60);
+	ctx.fillText("hiragana & katakana", (canvas1.width/5), 125);
+	ctx.font = "50px Kozuka Mincho Pro";
+	ctx.fillText("こ ん に ち は !", (canvas1.width/2)-160, canvas1.height/2);
+	ctx.font = "30px Kozuka Mincho Pro";
+	ctx.fillText("W e l c o m e !", (canvas1.width/2)-90, (canvas1.height/2)+45);
+	ctx.fillRect(340,500,210,72);
+	ctx.font = "48px Kozuka Mincho Pro";
+	ctx.fillStyle = "red";
+	ctx.fillText("Continue", 349,555);
+	
+	
+	var ctx = document.getElementById('canvas2').getContext('2d');
+	
+	var ctx = document.getElementById('canvas3').getContext('2d');
+	var img = document.getElementById("naslovna");
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "white";
+	ctx.font = "60px Kozuka Mincho Pro";
+	ctx.fillText("L e t 's  l e a r n", (canvas1.width/2)-200, 100);
+	
+	ctx.font = "40px Kozuka Mincho Pro";
+	ctx.fillText("Hiragana", (canvas1.width/2)-290, 250);
+	ctx.fillText("Katakana", (canvas1.width/2)+110, 250);
+	
+	//lijevi learn
+	ctx.beginPath();
+	ctx.lineWidth = 3;
+	ctx.moveTo((canvas1.width/2)-285, 315);
+	ctx.lineTo((canvas1.width/2)-135, 315);
+	ctx.lineTo((canvas1.width/2)-135, 365);
+	ctx.lineTo((canvas1.width/2)-285, 365);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.font = "35px Kozuka Mincho Pro";
+	ctx.fillText("Learn", (canvas1.width/2)-255, 350);
+	
+	//desni learn
+	ctx.beginPath();
+	ctx.moveTo((canvas1.width/2)+115, 315);
+	ctx.lineTo((canvas1.width/2)+265, 315);
+	ctx.lineTo((canvas1.width/2)+265, 365);
+	ctx.lineTo((canvas1.width/2)+115, 365);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fillText("Learn", (canvas1.width/2)+145, 350);
+	
+	//lijevi quiz
+	ctx.beginPath();
+	ctx.moveTo((canvas1.width/2)-285, 415);
+	ctx.lineTo((canvas1.width/2)-135, 415);
+	ctx.lineTo((canvas1.width/2)-135, 465);
+	ctx.lineTo((canvas1.width/2)-285, 465);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.font = "35px Kozuka Mincho Pro";
+	ctx.fillText("Quiz", (canvas1.width/2)-252, 450);
+	
+	//desni quiz
+	ctx.beginPath();
+	ctx.moveTo((canvas1.width/2)+115, 415);
+	ctx.lineTo((canvas1.width/2)+265, 415);
+	ctx.lineTo((canvas1.width/2)+265, 465);
+	ctx.lineTo((canvas1.width/2)+115, 465);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fillText("Quiz", (canvas1.width/2)+148, 450);
+	
+	//help
+	ctx.beginPath();
+	ctx.rect(770,30,70,30);
+	ctx.stroke();
+	ctx.font = "18px Kozuka Mincho Pro";
+	ctx.fillText("Help", 785, 52);
+	
+	//final quiz
+	ctx.beginPath();
+	ctx.moveTo((canvas1.width/2)-113, 515);
+	ctx.lineTo((canvas1.width/2)+92, 515);
+	ctx.lineTo((canvas1.width/2)+92, 565);
+	ctx.lineTo((canvas1.width/2)-113, 565);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.font = "35px Kozuka Mincho Pro";
+	ctx.fillText("Final Quiz", (canvas1.width/2)-90, 550);
+	
+	//help2.canvas
+	var ctx = document.getElementById('help2').getContext('2d');
+    ctx.drawImage(img, 0, 0);
+	ctx.fillStyle = "white";
+	ctx.font = "35px Kozuka Mincho Pro";
+	ctx.fillText("Hiragana and katakana are part of the", 90, 100);
+	ctx.fillText("japanese phonetic lettering system.", 90, 140);
+	ctx.fillText("Learn -> learn the japanese characters by clicking", 90, 230);
+	ctx.fillText("on each character. All characters are interactive.", 90, 270);
+	ctx.fillText("Quiz -> test your newfound knowledge", 90, 360);
+	ctx.fillText("Final Quiz -> a quiz that consists of both", 90, 450);
+	ctx.fillText("hiragana and katakana.", 90, 490);
+	ctx.beginPath();
+	ctx.rect(650,550, 125,70);
+	ctx.stroke();
+	ctx.fillText("Back", 675,600);
+	var ctx = document.getElementById('back').getContext;
+	
+	}
+	var ctx = document.getElementById('canvas2');
+	ctx.onclick = function(){
+	   canvas1.style.left =" 8000px";
+	   canvas1.style.top =" 2000px";
+	   canvas2.style.left =" 8000px";
+	   canvas2.style.top =" 2000px";
+	   canvas3.style.left = "8px";
+	   canvas3.style.top = "8px";
+	   var ctx = document.getElementById('hlearn').getContext;
+	   hlearn.style.left = "168px";
+	   hlearn.style.top = "323px";
+	   var ctx = document.getElementById('klearn').getContext;
+	   klearn.style.left = "568px";
+	   klearn.style.top = "323px";
+	   var ctx = document.getElementById('hquiz').getContext;
+	   hquiz.style.left = "168px";
+	   hquiz.style.top = "423px";
+	   var ctx = document.getElementById('kquiz').getContext;
+	   kquiz.style.left = "568px";
+	   kquiz.style.top = "423px";
+	   var ctx = document.getElementById('final').getContext;
+	   final.style.left = "338px";
+	   final.style.top = "523px";
+	   var ctx = document.getElementById('help').getContext;
+		help.style.left = "780px";
+		help.style.top = "38px";
+		}
+		  
+	var ctx = document.getElementById('hlearn');
+	ctx.onclick = function(){
+		window.location.assign("hlearn.html");
+    }
+		  
+	var ctx = document.getElementById('klearn');
+	ctx.onclick = function(){
+		window.location.assign("klearn.html");
+       	  }
+		  
+	var ctx = document.getElementById('kquiz');
+	ctx.onclick = function(){
+		window.location.assign("kquiz.html");
+       	  }
+		  
+	var ctx = document.getElementById('hquiz');
+	ctx.onclick = function(){
+		window.location.assign("hquiz.html");
+       	  }
+		  
+	var ctx = document.getElementById('final');
+	ctx.onclick = function(){
+		window.location.assign("final.html");
+       	  }
+		  
+	var ctx = document.getElementById('back');
+	ctx.onclick = function(){
+		help2.style.left = "5000px";
+		help2.style.top = "8000px";
+		canvas3.style.left = "8px";
+	    canvas3.style.top = "8px";
+	    hlearn.style.left = "168px";
+	    hlearn.style.top = "323px";
+	    klearn.style.left = "568px";
+	    klearn.style.top = "323px";
+	    hquiz.style.left = "168px";
+	    hquiz.style.top = "423px";
+	    kquiz.style.left = "568px";
+	    kquiz.style.top = "423px";
+	    final.style.left = "338px";
+	    final.style.top = "523px";
+	    help.style.left = "780px";
+		help.style.top = "38px";
+       	  }
+		  
+	var ctx = document.getElementById('help');
+	ctx.onclick = function(){
+		help2.style.left = "8px";
+		help2.style.top = "8px";
+		canvas3.style.left = "8000px";
+	    canvas3.style.top = "5000px";
+		hlearn.style.left = "5000px";
+	    hlearn.style.top = "8000px";
+	    klearn.style.left = "5000px";
+	    klearn.style.top = "8000px";
+	    hquiz.style.left = "5000px";
+	    hquiz.style.top = "8000px";
+	    kquiz.style.left = "5000px";
+	    kquiz.style.top = "8000px";
+	    final.style.left = "5000px";
+	    final.style.top = "8000px";
+	    help.style.left = "5000px";
+		help.style.top = "8000px";
+		back.style.left = "659px";
+		back.style.top = "557px";
+	}
+</script>
+</body>
+</html>

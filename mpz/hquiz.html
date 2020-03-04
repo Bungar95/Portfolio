@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style>
+	body {
+	background-image:url('birds.jpg');
+	}
+	
+	#kviz {
+		background-image:url('BG.jpg');
+            }
+	</style>
+</head>
+<body>
+
+<img id="naslovna" width="0" height="0" src="BG.jpg">
+<canvas id="canvas1" width="889" height="650" style="z-index: 1;position:absolute; left:8px; top:8px; border:1px solid #000000;"></canvas>
+<canvas id="kviz" width="889" height="650" style="z-index: -1;position:absolute; left:5000px; top:8000px; borber:1px solid #000000;"></canvas>
+<canvas id="back" width="125" height="50" style="z-index: 2;position:absolute; left:658px; top:570px;borber:1px solid #000000;"></canvas>
+<canvas id="begin" width="210" height="80" style="z-index: 2;position:absolute; left:358px; top:358px;"></canvas>
+
+<script>
+window.onload = function() {
+	var ctx = document.getElementById('canvas1').getContext('2d');
+	var naslovna = document.getElementById("naslovna");
+    ctx.drawImage(naslovna, 0, 0);
+	
+	ctx.fillStyle = "white";
+	ctx.font = "40px Kozuka Mincho Pro";
+	ctx.fillText("Hiragana Quiz",330, 80);
+	ctx.font = "28px Kozuka Mincho Pro";
+
+	ctx.fillText("The quiz consists of 10 questions.",250, 170);
+	ctx.fillText("Try your best to answer them all.",250, 220);
+	ctx.fillText("Good luck!",390, 270);
+	
+	//back
+	ctx.beginPath();
+	ctx.rect(650,562, 125,50);
+	ctx.stroke();
+	ctx.font = "32px Kozuka Mincho Pro";
+	ctx.fillText("Back", 675,595);
+	
+	//beginquiz
+	ctx.beginPath();
+	ctx.rect(350, 350, 210, 80);
+	ctx.stroke();
+	ctx.font = "35px Kozuka Mincho Pro";
+	ctx.fillText("Begin Quiz", 370,400);
+	
+	var canvas = document.getElementById("back").getContext('2d');
+	var canvas = document.getElementById("begin").getContext('2d');
+	
+	//quiz
+	
+		var canvas = document.getElementById("kviz");
+		var context = canvas.getContext("2d");
+		var noviquizbg = new Image();
+		var Question = new String;
+		var Option1 = new String;
+		var Option2 = new String;
+		var Option3 = new String;
+		var opcija1 = new Image();
+		var opcija2 = new Image();
+		var opcija3 = new Image();
+		var mx=0;
+		var my=0;
+		var CorrectAnswer = 0;
+		var rightanswers=0;
+		var wronganswers=0;
+		var qnumber = 0;
+		var QuizFinished = false;
+		var lock = false;                 
+		var textpos1=65;
+		var textpos2=220;
+		var textpos3=375;
+		var textpos4=520;      
+		
+		noviquizbg.onload = function(){
+        context.drawImage(noviquizbg, 0, 0);
+		SetQuestions();
+		}
+		noviquizbg.src = "noviquizbg.png";
+		
+		var Questions = ["1. Which vowel/consonant matches あ ?",
+						"2. Which vowel/consonant matches さ ?",
+						"3. Which hiragana symbol matches 'ka' ?",
+						"4. Which hiragana symbol matches 'e' ?",
+						"5. Which vowel/consonant matches り ?",
+						"6. Which vowel/consonant matches や ?",
+						"7. Which vowel/consonant matches る ?",
+						"8. Which vowel/consonant matches ろ ?",
+						"9. Which hiragana symbol matches 'yu' ?",
+						"10. Which vowel/consonant matches ふ ?"
+						];
+						
+		var Options = 	[["a","i","e"],
+						["sa","ha","re"],
+						["h_samo_ka.png","h_samo_a.png","h_samo_sa.png"],
+						["h_samo_e.png","h_samo_i.png","h_samo_o.png"],
+						["ri","i","re"],
+						["ya","yu","yo"],
+						["ru","ro","re"],
+						["ro","ru","re"],
+						["h_samo_yu.png","h_samo_sa.png","h_samo_me.png"],
+						["fu","su","mu"]
+						];
+		
+		SetQuestions = function(){ 
+            		
+			Question=Questions[qnumber]; 
+			CorrectAnswer=1+Math.floor(Math.random()*3);                                          
+				if(CorrectAnswer==1){Option1=Options[qnumber][0];Option2=Options[qnumber][1];Option3=Options[qnumber][2];}                
+				if(CorrectAnswer==2){Option1=Options[qnumber][2];Option2=Options[qnumber][0];Option3=Options[qnumber][1];}                
+				if(CorrectAnswer==3){Option1=Options[qnumber][1];Option2=Options[qnumber][2];Option3=Options[qnumber][0];} 
+			context.textBaseline = "middle"; 
+			context.font = "30pt Calibri,Arial";
+			context.fillText(Question,120,textpos1); 
+			context.font = "24pt Calibri,Arial";
+			
+		if ((qnumber == 0 ) || (qnumber == 1 ) || (qnumber == 4 ) || (qnumber == 5 ) || (qnumber == 6 ) || (qnumber == 7 ) || (qnumber == 9 )){
+					context.fillText(Option1,440,textpos2); 
+					context.fillText(Option2,440,textpos3);
+					context.fillText(Option3,440,textpos4);
+			
+					}
+			
+					else{
+					
+			opcija1.src = Option1;
+			opcija1.onload = function (){context.drawImage(opcija1,440,textpos2-30,70,60);}
+					
+			opcija2.src = Option2;
+			opcija2.onload = function(){context.drawImage(opcija2,440,textpos3-30,70,60);}
+					
+			opcija3.src = Option3;
+			opcija3.onload = function(){context.drawImage(opcija3,440,textpos4-30,70,60);}
+					}
+		
+		}
+		
+		
+		canvas.addEventListener('click',ProcessClick,false);
+		function ProcessClick(ev) {                 
+			my=ev.y-canvas.offsetTop;
+			mx=ev.x-canvas.offsetLeft;
+			if(ev.y == undefined){
+				my = ev.pageY - canvas.offsetTop; 
+			}
+			if(ev.x == undefined){
+				mx = ev.pagex - canvas.offsetLeft; 
+			}
+			if(lock){ 
+				ResetQ();
+			} 
+			else{
+				if(my>170 && my<280 && mx>147 && mx<700){GetFeedback(1);} 
+				if(my>315 && my<430 && mx>147 && mx<700){GetFeedback(2);}
+				if(my>460 && my<576 && mx>147 && mx<700){GetFeedback(3);}
+			}
+		}
+		
+		ResetQ= function(){
+			lock=false;
+			context.clearRect(0,0,889,650); 
+			qnumber++;
+			if(qnumber==Questions.length){
+				EndQuiz();
+			} 
+			else{
+				context.drawImage(noviquizbg, 0, 0); 
+				SetQuestions();
+			}
+		}
+		
+		GetFeedback = function(a){                        
+			if(a==CorrectAnswer){ 
+				context.drawImage(noviquizbg, 0,650,120,150,600,200+(150*(a-1)),75,70);
+				rightanswers++;
+			}              
+			else{ 
+				context.drawImage(noviquizbg, 130,650,120,150,600,200+(150*(a-1)),75,70);
+				wronganswers++; 
+			}
+			context.font = "12pt, Calibri,Arial";
+			context.fillStyle= "white";
+			context.fillText("Click again to continue",30,610);
+			context.fillStyle = "black";
+			lock=true; 
+		}
+		
+		
+		EndQuiz=function(){ 
+			canvas.removeEventListener('click',ProcessClick,false);
+			context.font = "22pt Calibri,Arial";
+			context.fillStyle ="white";
+			context.fillText("Thanks for playing! This is your score:",200,130);
+			context.fillText("Right answers: "+String(rightanswers),310,190);
+			context.fillText("Wrong answers: "+String(wronganswers),310,240);
+			context.rect(350, 390, 125, 50);
+			context.stroke();
+			context.fillText("Back", 385, 410);
+			back.style.left = "342px";
+			back.style.top = "382px";
+		};
+		};
+
+	
+	var ctx = document.getElementById('back');
+	ctx.onclick = function(){
+	   window.location.assign("index.html");
+       	}
+	
+	var ctx = document.getElementById('begin');
+	ctx.onclick = function(){
+	   canvas1.style.left = "5000px";
+	   canvas1.style.top = "8000px";
+	   begin.style.left = "5000px";
+	   begin.style.top = "8000px";
+	   kviz.style.left = "8px";
+	   kviz.style.top = "8px";
+       	}
+</script>
+</body>
+</html>

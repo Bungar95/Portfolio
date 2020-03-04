@@ -1,0 +1,120 @@
+<!doctype html>
+
+<!-- Everything done by myself, inspiration drawn from various sources, most notably from https://www.youtube.com/watch?v=uBqn4h1x6lo . -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio B.U.</title>
+  <!-- not working? <link rel="stylesheet" type="text/css" href="assets/css/main.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+
+  <style media="screen">
+
+  html {
+    text-align: center;
+    background-color: #080808;
+  }
+  body {
+    margin: 0px auto;
+  }
+  .samurai{
+    align-self: center;
+  }
+  .above, .dev, .tldr, .misc{
+    color: white;
+    font-family: Helvetica;
+  }
+  .dev a, .tldr a, .misc a{
+    color: #FF4649;
+  }
+  #container {
+  margin: 0 auto;
+  }
+  nav {
+  margin: 35px 0;
+  background-color: #FF4649;
+  }
+  nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  }
+  nav ul li {
+  display:inline-block;
+  background-color: ##cf4f2b;
+  }
+  nav a {
+  display:block;
+  padding:0 10px;
+  color:#FFF;
+  font-size:20px;
+  line-height: 60px;
+  text-decoration:none;
+  }
+  nav a:hover {
+  background-color: #333;
+  }
+  nav ul ul {
+  display: none;
+  position: absolute;
+  top: 60px;
+  background-color: ##cf4f2b;
+  }
+  nav ul li:hover > ul {
+  display:inherit;
+  }
+  nav ul ul li {
+  background-color: #FF4649;
+  width:230px;
+  float:none;
+  display:list-item;
+  position: relative;
+  }
+  nav ul ul ul li {
+  position: relative;
+  top:-60px;
+  left:230px;
+  }
+  nav ul ul li {
+  border: 1px solid white;
+  }
+  li > a:after { content:  ' ▼'; }
+  li > a:only-child:after { content: ''; }
+
+  </style>
+
+  <div id="container">
+    <h1 class="above">For portfolio purposes (in development)</h1>
+    <nav>
+      <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="#">Games</a>
+          <ul>
+            <li><a href="/legends/index.html">#1</a></li>
+            <li><a href="/game/index.html">#2</a></li>
+            <li><a href="/zero/index.html">#3</a></li>
+          </ul>
+        </li>
+        <li><a href="dev.php">Programming</a></li>
+        <li><a href="misc.php">MISC.</a></li>
+        <li><a href="tldr.php">TL/DR</a></li>
+      </ul>
+    </nav>
+    <br><br>
+  </div>
+</head>
+
+
+<body>
+  <!-- <h2 style="position: absolute; left: 300px; top: 80px;"> Like a samurai on an endless journey, searching for my way. </h2> -->
+  <div class="misc">
+
+
+
+
+
+  </div>
+
+</body>
+</html>
