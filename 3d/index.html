@@ -9,7 +9,11 @@
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/game.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/game.json", {onProgress: UnityProgress,
+     Module: {
+         "webglContextAttributes": {"preserveDrawingBuffer": true},
+     }
+ });
     </script>
 
     <style media="screen">
