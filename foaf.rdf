@@ -6,13 +6,13 @@
          xmlns:cert="http://www.w3.org/ns/auth/cert#"
          xmlns:dc="http://purl.org/dc/terms/">
 
-  <foaf:PersonalProfileDocument rdf:about="http://njh.me/foaf.rdf">
+  <foaf:PersonalProfileDocument rdf:about="http://bornaungar.me/foaf.rdf">
     <rdfs:label>Nicholas Humfrey's FOAF File</rdfs:label>
-    <foaf:maker rdf:resource="http://njh.me/"/>
-    <foaf:primaryTopic rdf:resource="http://njh.me/"/>
+    <foaf:maker rdf:resource="http://bornaungar.me/"/>
+    <foaf:primaryTopic rdf:resource="http://bornaungar.me/"/>
   </foaf:PersonalProfileDocument>
 
-  <foaf:Person rdf:about="http://njh.me/">
+  <foaf:Person rdf:about="http://bornaungar.me/">
     <foaf:name>Nicholas J Humfrey</foaf:name>
     <foaf:title>Mr</foaf:title>
     <foaf:givenName>Nicholas</foaf:givenName>
@@ -20,7 +20,7 @@
     <owl:sameAs>
       <foaf:Person rdf:about="http://www.aelius.com/njh#me">
         <rdfs:label>Nicholas Humfrey</rdfs:label>
-        <owl:sameAs rdf:resource="http://njh.me/"/>
+        <owl:sameAs rdf:resource="http://bornaungar.me/"/>
         <foaf:homepage rdf:resource="http://www.aelius.com/njh/"/>
       </foaf:Person>
     </owl:sameAs>
