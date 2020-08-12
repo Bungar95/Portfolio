@@ -2,11 +2,15 @@
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dc11="http://purl.org/dc/elements/1.1/"
          xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns:dc="http://purl.org/dc/terms/">
 
   <owl:Ontology rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10">
   </owl:Ontology>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+  </owl:AnnotationProperty>
 
   <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
   </owl:AnnotationProperty>
@@ -38,6 +42,14 @@
   <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/wentTo">
   </owl:AnnotationProperty>
 
+  <owl:Class rdf:about="http://webprotege.stanford.edu/RDoNVfzALsnZRcdjGEJVqr1">
+    <rdfs:label xml:lang="en">Food</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://webprotege.stanford.edu/Rr20eYF5gnMN3STdq0ORdT">
+    <rdfs:label xml:lang="en">Animals</rdfs:label>
+  </owl:Class>
+
   <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Education">
   </owl:Class>
 
@@ -56,12 +68,20 @@
   <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Project">
   </owl:Class>
 
+  <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RDPCNgMDtQE32Lr9OshYx0B">
+    <rdf:type rdf:resource="http://webprotege.stanford.edu/RDoNVfzALsnZRcdjGEJVqr1"/>
+    <dc11:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Type je NamedIndividual jer nisam osobno dodao type, ali volim jesti ramen.</dc11:description>
+    <rdfs:label xml:lang="en">Ramen</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ramen</foaf:name>
+  </owl:NamedIndividual>
+
   <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#Borna_Ungar">
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <dc11:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ja!</dc11:description>
     <rdfs:label>Borna Ungar</rdfs:label>
     <foaf:dislikes>
       <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#fish">
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Items"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/Rr20eYF5gnMN3STdq0ORdT"/>
         <foaf:name>Fish</foaf:name>
       </owl:NamedIndividual>
     </foaf:dislikes>
@@ -129,35 +149,36 @@
 
     <foaf:likes>
       <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#cat">
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Items"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/Rr20eYF5gnMN3STdq0ORdT"/>
         <foaf:name>Cat</foaf:name>
       </owl:NamedIndividual>
     </foaf:likes>
 
     <foaf:likes>
       <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#dog">
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Items"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/Rr20eYF5gnMN3STdq0ORdT"/>
         <foaf:name>Dog</foaf:name>
       </owl:NamedIndividual>
     </foaf:likes>
 
     <foaf:likes>
       <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#dragon">
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Items"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/Rr20eYF5gnMN3STdq0ORdT"/>
+        <dc11:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zmajevi su najjači!</dc11:description>
         <foaf:name>Dragon</foaf:name>
       </owl:NamedIndividual>
     </foaf:likes>
 
     <foaf:likes>
       <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#lasagne">
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Items"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/RDoNVfzALsnZRcdjGEJVqr1"/>
         <foaf:name>Lasagne</foaf:name>
       </owl:NamedIndividual>
     </foaf:likes>
 
     <foaf:likes>
       <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#spaghetti">
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Items"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/RDoNVfzALsnZRcdjGEJVqr1"/>
         <foaf:name>Spaghetti</foaf:name>
       </owl:NamedIndividual>
     </foaf:likes>
@@ -209,6 +230,7 @@
     <foaf:speaks>
       <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#svenska">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Language"/>
+        <dc11:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ja kann talar lite svenska.</dc11:description>
         <foaf:name>Svenska</foaf:name>
       </owl:NamedIndividual>
     </foaf:speaks>
