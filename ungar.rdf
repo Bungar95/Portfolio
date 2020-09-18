@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:dc="http://purl.org/dc/terms/">
+
+  <owl:Ontology rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10">
+  </owl:Ontology>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/dislikes">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/hasHobby">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/knows">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/likes">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/pastProject">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/speaks">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/wentTo">
+  </owl:AnnotationProperty>
+
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Food">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Animals">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Education">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Hobby">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Items">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Language">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Project">
+  </owl:Class>
+
+  <owl:NamedIndividual rdf:about="http://xmlns.com/foaf/0.1/Food">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Food"/>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Type je NamedIndividual jer nisam osobno dodao type, ali volim jesti ramen.</dc:description>
+    <rdfs:label xml:lang="en">Ramen</rdfs:label>
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ramen</foaf:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#Borna_Ungar">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ja!</dc:description>
+    <rdfs:label>Borna Ungar</rdfs:label>
+    <foaf:dislikes>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#fish">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Food"/>
+        <dc:description>Fuj</dc:description>
+        <foaf:name>Fish</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:dislikes>
+
+    <foaf:hasHobby>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#basketball">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Hobby"/>
+        <dc:description>Sport</dc:description>
+        <foaf:name>Basketball</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:hasHobby>
+
+    <foaf:hasHobby>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#football">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Hobby"/>
+        <dc:description>Sport</dc:description>
+        <foaf:name>Football</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:hasHobby>
+
+    <foaf:hasHobby>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#games">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Hobby"/>
+        <dc:description>Igre</dc:description>
+        <foaf:name>Games</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:hasHobby>
+
+    <foaf:hasHobby>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#hangouts">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Hobby"/>
+        <dc:description>Druženja s prijateljima</dc:description>
+        <foaf:name>Hangouts</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:hasHobby>
+
+    <foaf:hasHobby>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#unity3d">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Hobby"/>
+        <dc:description>Program za izradu videoigara</dc:description>
+        <foaf:name>Unity 3D</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:hasHobby>
+
+    <foaf:knows>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#Nikola_Milić">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <dc:description>Kolega</dc:description>
+        <rdfs:label>Nikola Milić</rdfs:label>
+        <foaf:name>Nikola Milić</foaf:name>
+        <foaf:speaks rdf:resource="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#hrvatski"/>
+      </owl:NamedIndividual>
+    </foaf:knows>
+
+    <foaf:knows>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#Tomislav_Jakopec">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <dc:description>Profesor</dc:description>
+        <rdfs:label>Tomislav Jakopec</rdfs:label>
+        <foaf:name>Tomislav Jakopec</foaf:name>
+        <foaf:pastProject rdf:resource="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#project-dansigurnijeginterneta"/>
+        <foaf:speaks rdf:resource="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#hrvatski"/>
+      </owl:NamedIndividual>
+    </foaf:knows>
+
+    <foaf:likes>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#ball">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Items"/>
+        <dc:description>Okrugli objekt</dc:description>
+        <foaf:name>Ball</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:likes>
+
+    <foaf:likes>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#cat">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Animals"/>
+        <dc:description>Mijau!</dc:description>
+        <foaf:name>Cat</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:likes>
+
+    <foaf:likes>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#dog">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Animals"/>
+        <dc:description>Vuf Vuf!</dc:description>
+        <foaf:name>Dog</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:likes>
+
+    <foaf:likes>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#dragon">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Animals"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zmajevi su najjači!</dc:description>
+        <foaf:name>Dragon</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:likes>
+
+    <foaf:likes>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#lasagne">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Food"/>
+        <dc:description>mmmmmmmmm!</dc:description>
+        <foaf:name>Lasagne</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:likes>
+
+    <foaf:likes>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#spaghetti">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Food"/>
+        <dc:description>Talijansko uže</dc:description>
+        <foaf:name>Spaghetti</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:likes>
+
+    <foaf:name>Borna Ungar</foaf:name>
+    <foaf:pastProject>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#project-allianthe">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <dc:description>Allianthe aromaterapija website</dc:description>
+        <foaf:homepage>http://allianthe.com.hr/</foaf:homepage>
+        <foaf:name>Allianthe aromaterapija</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:pastProject>
+
+    <foaf:pastProject rdf:resource="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#project-dansigurnijeginterneta"/>
+    <foaf:pastProject>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#project-iris">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <dc:description>IRIS stropovi website</dc:description>
+        <foaf:homepage>https://stropovi.eu/</foaf:homepage>
+        <foaf:name>IRIS</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:pastProject>
+
+    <foaf:pastProject>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#project-skartoc">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <dc:description>Škartoc website</dc:description>
+        <foaf:homepage>https://skartoc.hr/</foaf:homepage>
+        <foaf:name>Škartoc slastičarnica</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:pastProject>
+
+    <foaf:speaks>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#deutsch">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Language"/>
+        <dc:description>Njemački jezik</dc:description>
+        <foaf:name>Deutsch</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:speaks>
+
+    <foaf:speaks>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#english">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Language"/>
+        <dc:description>Engleski jezik</dc:description>
+        <foaf:name>English</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:speaks>
+
+    <foaf:speaks rdf:resource="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#hrvatski"/>
+    <foaf:speaks>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#svenska">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Language"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ja kann talar lite svenska.</dc:description>
+        <foaf:name>Svenska</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:speaks>
+
+    <foaf:wentTo>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#ffos">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Education"/>
+        <dc:description>IT - Nakladništvo</dc:description>
+        <foaf:name>Filozofski fakultet u Osijeku</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:wentTo>
+
+    <foaf:wentTo>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#ffzg">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Education"/>
+        <dc:description>Informatologija</dc:description>
+        <foaf:name>Filozofski fakultet u Zagrebu</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:wentTo>
+
+    <foaf:wentTo>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#iii-gimnazija">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Education"/>
+        <dc:description>Srednja škola</dc:description>
+        <foaf:name>Prirodoslovno-matematička gimnazija Osijek</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:wentTo>
+
+    <foaf:wentTo>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#os-ivan-filipovic">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Education"/>
+        <dc:description>Osnovna škola</dc:description>
+        <foaf:name>Osnovna škola Ivana Filipovića</foaf:name>
+      </owl:NamedIndividual>
+    </foaf:wentTo>
+
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#Lionel_Messi">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <dc:description>Argentinski nogometaš</dc:description>
+    <rdfs:label>Lionel Messi</rdfs:label>
+    <foaf:name>Lionel Messi</foaf:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#hrvatski">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Language"/>
+    <dc:description>Službeni jezik Republike Hrvatske</dc:description>
+    <foaf:name>Hrvatski</foaf:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borna/ontologies/2020/4/untitled-ontology-10#project-dansigurnijeginterneta">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+    <dc:description>App for &quot;Dan sigurnijeg interneta 2020.&quot;</dc:description>
+    <foaf:name>Dan sigurnijeg interneta 2020.</foaf:name>
+  </owl:NamedIndividual>
+
+</rdf:RDF>
